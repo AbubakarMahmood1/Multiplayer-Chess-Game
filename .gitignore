@@ -1,0 +1,69 @@
+# .gitignore for Multiplayer Chess Game
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+/coverage
+
+# Production build
+/build
+/dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+error.log
+combined.log
+
+# IDE and editor files
+/.idea
+/.vscode
+*.swp
+*.swo
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MongoDB data directory
+/data
+
+# Temporary files
+.tmp
+.temp
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Package lock files (optional)
+# package-lock.json
+# yarn.lock
+
+# Client-specific ignores (if in monorepo structure)
+/client/node_modules
+/client/build
+/client/.env
+/client/.env.local
+
+# Server-specific ignores (if in monorepo structure)
+/server/node_modules
+/server/.env

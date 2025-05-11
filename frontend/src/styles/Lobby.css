@@ -1,0 +1,126 @@
+.lobby {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lobby-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-welcome {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .user-welcome .username {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .create-game {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .time-control {
+    margin: 15px 0;
+  }
+  
+  .time-control select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
+  }
+  
+  .available-games {
+    margin-top: 30px;
+  }
+  
+  .game-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .game-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .game-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .creator-name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .creator-rating {
+    color: #666;
+    margin-right: 15px;
+  }
+  
+  .time-info {
+    background-color: #e8e8e8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-icon {
+  margin-right: 10px;
+}
+
+.dismiss-error {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

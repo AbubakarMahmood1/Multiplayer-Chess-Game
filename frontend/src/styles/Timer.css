@@ -1,0 +1,14 @@
+/* Timer.css */
+.timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .timer.white {
+    color: #000;
+  }
+  
+  .timer.black {
+    color: #000;
+  }
