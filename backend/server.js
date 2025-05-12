@@ -63,8 +63,6 @@ const connectWithRetry = () => {
 };
 connectWithRetry();
 
-// Add this to server.js after MongoDB connection
-// In server.js
 const cleanupAbandonedGames = async () => {
   try {
     console.log("\n--- RUNNING CLEANUP JOB ---");

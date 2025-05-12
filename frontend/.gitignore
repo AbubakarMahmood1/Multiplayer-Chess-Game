@@ -1,7 +1,7 @@
 # .gitignore for Multiplayer Chess Game
 
 # Dependencies
-node_modules
+/node_modules
 /.pnp
 .pnp.js
 
@@ -59,11 +59,11 @@ yarn-error.log*
 # yarn.lock
 
 # Client-specific ignores (if in monorepo structure)
-/client/node_modules
-/client/build
-/client/.env
-/client/.env.local
+node_modules
+build
+.env
+.env.local
 
 # Server-specific ignores (if in monorepo structure)
-/server/node_modules
-/server/.env
+../server/node_modules
+../server/.env

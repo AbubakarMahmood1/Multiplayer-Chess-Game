@@ -44,7 +44,7 @@ export const initSocket = () => {
           userId: activeUserId 
         });
         
-        // Send heartbeats immediately and repeatedly for 15 seconds to ensure activity is registered
+        // Send heartbeats immediately and repeatedly for 10 seconds to ensure activity is registered
         const initialHeartbeatInterval = setInterval(() => {
           if (socket.connected) {
             socket.emit('heartbeat', {

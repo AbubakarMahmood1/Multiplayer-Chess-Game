@@ -35,24 +35,33 @@ function Chat({ socket, gameId, isSpectator }) {
 	}
   }, [messages]);
 
-  const sendMessage = (e) => {
-    e.preventDefault();
-    if (message.trim() && socket?.connected && user?.id) {
+const sendMessage = (e) => {
+  e.preventDefault();
+  if (message.trim() && socket?.connected && user?.id) {
+    const filteredMessage = message.trim().replace(/fast/gi, '').trim();
+    
+    if (filteredMessage) {
       socket.emit('send_message', {
         gameId,
         userId: user.id,
-        message: message.trim()
+        message: filteredMessage
       });
-      setMessage('');
     } else {
       setMessages(prev => [...prev, {
         userId: user?.id,
-        message: 'Cannot send message: Server disconnected',
+        message: 'Message contained only filtered content',
         timestamp: new Date()
       }]);
     }
-  };
-
+    setMessage('');
+  } else {
+    setMessages(prev => [...prev, {
+      userId: user?.id,
+      message: 'Cannot send message: Server disconnected',
+      timestamp: new Date()
+    }]);
+  }
+};
   // If user is not logged in, show login message
   if (!isLoggedIn) {
     return <div>Please log in to use chat.</div>;
